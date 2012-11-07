@@ -1,0 +1,7 @@
+
+/**
+ * plugin.tx_adxbackendlayout
+ */
+plugin.tx_adxbackendlayout {
+	layoutC11F11 < plugin.tx_adxbackendlayout.global
+}

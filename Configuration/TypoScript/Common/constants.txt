@@ -1,0 +1,55 @@
+
+/**
+ * plugin.tx_adxbackendlayout
+ */
+plugin.tx_adxbackendlayout {
+
+	view {
+		templateRootPath = EXT:adx_backend_layout/Resources/Private/Templates/
+		layoutRootPath = EXT:adx_backend_layout/Resources/Private/Layouts/
+		partialRootPath = EXT:adx_backend_layout/Resources/Private/Partials/
+	}
+
+	cssClassPrefix = adxbackendlayout-
+
+	global {
+
+		# Have effects to sub groups
+		group {
+			classes = 
+			styles = 
+		}
+
+		content < .group
+
+		feature < .group
+		feature {
+			classes = {$plugin.tx_adxbackendlayout.cssClassPrefix}column {$plugin.tx_adxbackendlayout.cssClassPrefix}column-feature
+		}
+
+		article < .group
+		article {
+			classes = {$plugin.tx_adxbackendlayout.cssClassPrefix}column {$plugin.tx_adxbackendlayout.cssClassPrefix}column-articles
+		}
+
+		asideRight < .group
+		asideRight {
+			classes = {$plugin.tx_adxbackendlayout.cssClassPrefix}column {$plugin.tx_adxbackendlayout.cssClassPrefix}column-aside {$plugin.tx_adxbackendlayout.cssClassPrefix}column-right
+		}
+
+		asideLeft < .group
+		asideLeft {
+			classes = {$plugin.tx_adxbackendlayout.cssClassPrefix}column {$plugin.tx_adxbackendlayout.cssClassPrefix}column-aside {$plugin.tx_adxbackendlayout.cssClassPrefix}column-left
+		}
+
+		complementary < .group
+		complementary {
+			classes = {$plugin.tx_adxbackendlayout.cssClassPrefix}column {$plugin.tx_adxbackendlayout.cssClassPrefix}column-aside {$plugin.tx_adxbackendlayout.cssClassPrefix}column-complementary
+		}
+
+		footer < .group
+		footer {
+			classes = {$plugin.tx_adxbackendlayout.cssClassPrefix}column {$plugin.tx_adxbackendlayout.cssClassPrefix}column-aside {$plugin.tx_adxbackendlayout.cssClassPrefix}column-complementary
+		}
+	}
+}

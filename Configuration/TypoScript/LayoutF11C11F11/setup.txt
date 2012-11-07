@@ -1,0 +1,82 @@
+
+/**
+ * lib.tx_adxbackendlayout
+ */
+lib.tx_adxbackendlayout.layoutF11C11F11 {
+
+	group.class = TEXT
+	group.class {
+		value = {$plugin.tx_adxbackendlayout.global.group.classes}
+		override = {$plugin.tx_adxbackendlayout.layoutF11C11F11.group.classes}
+		required = 1
+		noTrimWrap = | class="|"|
+	}
+
+	group.style = TEXT
+	group.style {
+		value = {$plugin.tx_adxbackendlayout.global.group.styles}
+		override = {$plugin.tx_adxbackendlayout.layoutF11C11F11.group.styles}
+		required = 1
+		noTrimWrap = | style="|"|
+	}
+
+	feature.class < .group.class
+	feature.class {
+		value = {$plugin.tx_adxbackendlayout.global.feature.classes}
+		override = {$plugin.tx_adxbackendlayout.layoutF11C11F11.feature.classes}
+	}
+
+	feature.style < .group.style
+	feature.style {
+		value = {$plugin.tx_adxbackendlayout.global.feature.styles}
+		override = {$plugin.tx_adxbackendlayout.layoutF11C11F11.feature.styles}
+	}
+
+	content.class < .group.class
+	content.class {
+		value = {$plugin.tx_adxbackendlayout.global.content.classes}
+		override = {$plugin.tx_adxbackendlayout.layoutF11C11F11.content.classes}
+	}
+
+	content.style < .group.style
+	content.style {
+		value = {$plugin.tx_adxbackendlayout.global.content.styles}
+		override = {$plugin.tx_adxbackendlayout.layoutF11C11F11.content.styles}
+	}
+
+	article.class < .group.class
+	article.class {
+		value = {$plugin.tx_adxbackendlayout.global.article.classes}
+		override = {$plugin.tx_adxbackendlayout.layoutF11C11F11.article.classes}
+	}
+
+	article.style < .group.style
+	article.style {
+		value = {$plugin.tx_adxbackendlayout.global.article.styles}
+		override = {$plugin.tx_adxbackendlayout.layoutF11C11F11.article.styles}
+	}
+
+	complementary.class < .group.class
+	complementary.class {
+		value = {$plugin.tx_adxbackendlayout.global.complementary.classes}
+		override = {$plugin.tx_adxbackendlayout.layoutF11C11F11.complementary.classes}
+	}
+
+	complementary.style < .group.style
+	complementary.style {
+		value = {$plugin.tx_adxbackendlayout.global.complementary.styles}
+		override = {$plugin.tx_adxbackendlayout.layoutF11C11F11.complementary.styles}
+	}
+
+	footer.class < .group.class
+	footer.class {
+		value = {$plugin.tx_adxbackendlayout.global.complementary.classes}
+		override = {$plugin.tx_adxbackendlayout.layoutF11C11F11.complementary.classes}
+	}
+
+	footer.style < .group.style
+	footer.style {
+		value = {$plugin.tx_adxbackendlayout.global.footer.styles}
+		override = {$plugin.tx_adxbackendlayout.layoutF11C11F11.footer.styles}
+	}
+}

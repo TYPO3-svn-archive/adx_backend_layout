@@ -1,0 +1,48 @@
+
+<f:layout name="Default" />
+
+<f:section name="Masterhead">
+
+	<f:render partial="Masterhead" />
+
+</f:section>
+
+<f:section name="Main">
+
+	<section id="main"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C11F11.group.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C11F11.group.style', data: '{_all}')} role="main">
+
+		<div id="feature"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C11F11.feature.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C11F11.feature.style', data: '{_all}')} role="complementary">
+			<f:render partial="ColumnFeature" arguments="{_all}" />
+		</div><!-- #feature end -->
+
+		<div id="content"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C11F11.content.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C11F11.content.style', data: '{_all}')} role="group">
+
+			<div id="articles"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C11F11.article.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C11F11.article.style', data: '{_all}')} role="article">
+				<f:render partial="ColumnArticle" arguments="{_all}" />
+			</div><!-- #articles end -->
+
+			<div class="clear"></div>
+
+			<f:cObject typoscriptObjectPath="lib.tx_adxbackendlayout.sections.toTopBottom" data="{_all}" />
+
+		</div><!-- #content end -->
+
+	</section><!-- #main end -->
+
+</f:section>
+
+<f:section name="Complementary">
+
+	<section id="complementary"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C11F11.complementary.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C11F11.complementary.style', data: '{_all}')} role="complementary">
+		<f:render partial="ColumnComplementary" arguments="{_all}" />
+	</section><!-- #complementary end -->
+
+</f:section>
+
+<f:section name="Footer">
+
+	<footer id="footer"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C11F11.footer.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C11F11.footer.style', data: '{_all}')} role="contentinfo">
+		<f:render partial="Footer" arguments="{_all}" />
+	</footer><!-- #footer end -->
+
+</f:section>

@@ -1,0 +1,98 @@
+
+/**
+ * lib.tx_adxbackendlayout
+ */
+lib.tx_adxbackendlayout.layoutC1434F11 {
+
+	group.class = TEXT
+	group.class {
+		value = {$plugin.tx_adxbackendlayout.global.group.classes}
+		override = {$plugin.tx_adxbackendlayout.layoutC1434F11.group.classes}
+		required = 1
+		noTrimWrap = | class="|"|
+	}
+
+	group.style = TEXT
+	group.style {
+		value = {$plugin.tx_adxbackendlayout.global.group.styles}
+		override = {$plugin.tx_adxbackendlayout.layoutC1434F11.group.styles}
+		required = 1
+		noTrimWrap = | style="|"|
+	}
+
+	asideLeft.class < .group.class
+	asideLeft.class {
+		value = {$plugin.tx_adxbackendlayout.global.asideLeft.classes}
+		override = {$plugin.tx_adxbackendlayout.layoutC1434F11.asideLeft.classes}
+	}
+
+	asideLeft.style = COA
+	asideLeft.style {
+
+		stdWrap.noTrimWrap = | style="|"|
+
+		10 = LOAD_REGISTER
+		10.gutter.cObject = TEXT
+		10.gutter.cObject {
+			value = {$plugin.tx_adxbackendlayout.global.gutter}
+			override = {$plugin.tx_adxbackendlayout.layoutC1434F11.gutter}
+		}
+
+		20 = TEXT
+		20.value = float:left;
+
+		30 = TEXT
+		30 {
+			value = {$plugin.tx_adxbackendlayout.global.asideLeft.width}
+			override = {$plugin.tx_adxbackendlayout.layoutC1434F11.asideLeft.width}
+			ifEmpty.dataWrap = (100 - {register: gutter} * 3) / 4
+
+			prioriCalc = 1
+			round.roundType = round
+			round.decimals = 3
+
+			wrap = width:|%;
+		}
+
+		40 = TEXT
+		40 {
+			data = register: gutter
+			wrap = margin-right:|%;
+		}
+
+		50 = TEXT
+		50.value = {$plugin.tx_adxbackendlayout.global.asideLeft.styles}
+		50.override = {$plugin.tx_adxbackendlayout.layoutC1434F11.asideLeft.styles}
+	}
+
+	article.class < .group.class
+	article.class {
+		value = {$plugin.tx_adxbackendlayout.global.article.classes}
+		override = {$plugin.tx_adxbackendlayout.layoutC1434F11.article.classes}
+	}
+
+	article.style < .asideLeft.style
+	article.style {
+
+		20.value = float:right;
+
+		30.ifEmpty.dataWrap = ((100 - {register: gutter} * 3) / 4) * 3 + {register: gutter} * 2
+
+		40 >
+
+		50.value = {$plugin.tx_adxbackendlayout.global.article.styles}
+		50.override = {$plugin.tx_adxbackendlayout.layoutC1434F11.article.styles}
+	}
+
+	complementary.class < .group.class
+	complementary.class {
+		value = {$plugin.tx_adxbackendlayout.global.complementary.classes}
+		override = {$plugin.tx_adxbackendlayout.layoutC1434F11.complementary.classes}
+	}
+
+	complementary.style < .group.style
+	complementary.style {
+		value = {$plugin.tx_adxbackendlayout.global.complementary.styles}
+		override = {$plugin.tx_adxbackendlayout.layoutC1434F11.complementary.styles}
+	}
+}

@@ -1,0 +1,227 @@
+
+/**
+ * plugin.css_styled_content
+ */
+# Activate content slide.
+styles.content.get {
+
+	select.pidInList = {field: mount_pid // field: uid}
+	select.pidInList.insertData = 1
+
+	select.andWhere = ( tt_content.tx_adxbackendlayout_inherit = 1 OR ( tt_content.tx_adxbackendlayout_inherit = 0 AND tt_content.pid = {TSFE: id} ) )
+	select.andWhere.insertData = 1
+
+	slide = -1
+	slide.collect = -1
+	slide.collectReverse = 1
+}
+
+# get content, left
+styles.content.getLeft < styles.content.get
+styles.content.getLeft.select.where = colPos=1
+
+# get content, right
+styles.content.getRight < styles.content.get
+styles.content.getRight.select.where = colPos=2
+
+# get content, margin
+styles.content.getBorder < styles.content.get
+styles.content.getBorder.select.where = colPos=3
+
+# get content, complementary
+styles.content.getComplementary < styles.content.get
+styles.content.getComplementary.select.where = colPos=10
+styles.content.getComplementary.select.andWhere = ( tt_content.tx_adxbackendlayout_inherit = 1 OR ( tt_content.tx_adxbackendlayout_inherit = 0 AND tt_content.pid = {TSFE: id} ) )
+
+
+/**
+ * lib.tx_adxbackendlayout
+ */
+lib.tx_adxbackendlayout.layoutId = RECORDS
+lib.tx_adxbackendlayout.layoutId {
+
+	tables = backend_layout
+
+	source.field = backend_layout
+	source.ifEmpty.data = levelfield: -2, backend_layout_next_level, slide
+
+	conf.backend_layout = TEXT
+	conf.backend_layout.field = tx_adxbackendlayout_layout_id
+}
+
+lib.tx_adxbackendlayout.bodyTag = COA
+lib.tx_adxbackendlayout.bodyTag {
+
+	wrap = <body | >
+
+	10 =< lib.tx_adxbackendlayout.layoutId
+	10.stdWrap.noTrimWrap = | id="|"|
+
+	30 = TEXT
+	30 {
+		if.isTrue.data = GP: lightbox
+		value = lightbox
+		noTrimWrap = | class="|"|
+	}
+}
+
+lib.tx_adxbackendlayout.sections {
+
+	allStdWrap = TEXT
+	allStdWrap.current = 1
+
+	masterheadStdWrap = TEXT
+	masterheadStdWrap.current = 1
+	masterheadStdWrap.wrap = <section id="masterhead"> | </section><!-- #masterhead end -->
+
+	header = 
+
+	headerStdWrap = TEXT
+	headerStdWrap.current = 1
+	headerStdWrap.wrap = <div id="header"> | </div><!-- #header end -->
+
+	meta = 
+
+	metaStdWrap = TEXT
+	metaStdWrap.current = 1
+	metaStdWrap.wrap = <div id="meta"> | </div><!-- #meta end -->
+
+	navigation = 
+
+	navigationStdWrap = TEXT
+	navigationStdWrap.current = 1
+	navigationStdWrap.wrap = <div id="navigation" role="navigation"> | </div><!-- #navigation end -->
+
+	toTopBottom = TEXT
+	toTopBottom {
+		value = <p class="toTop bottom"><a href="#" title="{LLL:EXT:css_styled_content/pi1/locallang.xml:label.toTop}">{LLL:EXT:css_styled_content/pi1/locallang.xml:label.toTop}</a></p>
+		insertData = 1
+	}
+
+	footer = 
+
+	footerStdWrap = TEXT
+	footerStdWrap.current = 1
+
+	topSectionsStdWrap = TEXT
+	topSectionsStdWrap.current = 1
+
+	bottomSectionsStdWrap = TEXT
+	bottomSectionsStdWrap.current = 1
+}
+
+lib.tx_adxbackendlayout.columnHooks {
+
+	masterhead.preCObject = 
+	masterhead.postCObject = 
+
+	main.preCObject = 
+	main.postCObject = 
+
+	feature.preCObject = 
+	feature.postCObject = 
+
+	article.preCObject = 
+	article.postCObject = 
+
+	asideLeft.preCObject = 
+	asideLeft.postCObject = 
+
+	asideRight.preCObject = 
+	asideRight.postCObject = 
+
+	complementary.preCObject = 
+	complementary.postCObject = 
+
+	footer.preCObject = 
+	footer.postCObject = 
+}
+
+
+/**
+ * plugin.tx_adxbackendlayout
+ */
+plugin.tx_adxbackendlayout = FLUIDTEMPLATE
+plugin.tx_adxbackendlayout {
+
+	file = default
+	file {
+		override.cObject =< lib.tx_adxbackendlayout.layoutId
+		case = ucfirst
+		outerWrap = {$plugin.tx_adxbackendlayout.view.templateRootPath} | .html
+	}
+
+	layoutRootPath = {$plugin.tx_adxbackendlayout.view.layoutRootPath}
+	partialRootPath = {$plugin.tx_adxbackendlayout.view.partialRootPath}
+
+	variables {
+
+		clearfix = TEXT
+		clearfix.value = {$plugin.tx_adxless.cssClassPrefix}clearfix
+
+		backendLayoutId =< lib.tx_adxbackendlayout.layoutId
+
+		columnFeature < styles.content.getBorder
+		columnArticle < styles.content.get
+		columnAsideLeft < styles.content.getLeft
+		columnAsideRight < styles.content.getRight
+		columnComplementary < styles.content.getComplementary
+	}
+}
+
+
+/**
+ * Page: includes
+ */
+page.includeJS {
+	tx_adxbackendlayout_common = EXT:adx_backend_layout/Resources/Public/JavaScript/Common.js
+}
+
+
+/**
+ * Page: Body tag
+ */
+page {
+	# Make body tag with backend layout id.
+	bodyTagCObject =< lib.tx_adxbackendlayout.bodyTag
+}
+
+[compatVersion = 4.7.0]
+
+tt_content.stdWrap.innerWrap.cObject.default.20 {
+
+	1352275551 = CASE
+	1352275551 {
+
+		key.field = tx_adxbackendlayout_device_visibility
+
+		default = TEXT
+		default.value = 
+
+		1 = TEXT
+		1.value = {$plugin.tx_adxless.cssClassPrefix}hidden-desktop
+
+		2 = TEXT
+		2.value = {$plugin.tx_adxless.cssClassPrefix}hidden-tablet
+
+		3 = TEXT
+		3.value = {$plugin.tx_adxless.cssClassPrefix}visible-phone
+
+		4 = TEXT
+		4.value = {$plugin.tx_adxless.cssClassPrefix}hidden-phone
+
+		5 = TEXT
+		5.value = {$plugin.tx_adxless.cssClassPrefix}visible-tablet
+
+		6 = TEXT
+		6.value = {$plugin.tx_adxless.cssClassPrefix}visible-desktop
+
+		7 = TEXT
+		7.value = {$plugin.tx_adxless.cssClassPrefix}hidden-desktop {$plugin.tx_adxless.cssClassPrefix}hidden-tablet {$plugin.tx_adxless.cssClassPrefix}hidden-phone
+
+		stdWrap.required = 1
+		stdWrap.noTrimWrap = | ||
+	}
+}
+
+[end]

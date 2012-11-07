@@ -1,0 +1,22 @@
+
+<f:cObject typoscriptObjectPath="lib.tx_adxbackendlayout.sections.masterheadStdWrap">
+
+	<f:if condition="{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.sections.header', data: '{_all}')}">
+		<f:cObject typoscriptObjectPath="lib.tx_adxbackendlayout.sections.headerStdWrap">
+			<f:cObject typoscriptObjectPath="lib.tx_adxbackendlayout.sections.header" data="{_all}" />
+		</f:cObject>
+	</f:if>
+
+	<f:if condition="{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.sections.meta', data: '{_all}')}">
+		<f:cObject typoscriptObjectPath="lib.tx_adxbackendlayout.sections.metaStdWrap">
+			<f:cObject typoscriptObjectPath="lib.tx_adxbackendlayout.sections.meta" data="{_all}" />
+		</f:cObject>
+	</f:if>
+
+	<f:if condition="{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.sections.navigation', data: '{_all}')}">
+		<f:cObject typoscriptObjectPath="lib.tx_adxbackendlayout.sections.navigationStdWrap">
+			<f:cObject typoscriptObjectPath="lib.tx_adxbackendlayout.sections.navigation" data="{_all}" />
+		</f:cObject>
+	</f:if>
+
+</f:cObject>

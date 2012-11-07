@@ -1,0 +1,46 @@
+
+/**
+ * lib.tx_adxbackendlayout
+ */
+lib.tx_adxbackendlayout.layoutC11F11 {
+
+	group.class = TEXT
+	group.class {
+		value = {$plugin.tx_adxbackendlayout.global.group.classes}
+		override = {$plugin.tx_adxbackendlayout.layoutC11F11.group.classes}
+		required = 1
+		noTrimWrap = | class="|"|
+	}
+
+	group.style = TEXT
+	group.style {
+		value = {$plugin.tx_adxbackendlayout.global.group.styles}
+		override = {$plugin.tx_adxbackendlayout.layoutC11F11.group.styles}
+		required = 1
+		noTrimWrap = | style="|"|
+	}
+
+	article.class < .group.class
+	article.class {
+		value = {$plugin.tx_adxbackendlayout.global.article.classes}
+		override = {$plugin.tx_adxbackendlayout.layoutC11F11.article.classes}
+	}
+
+	article.style < .group.style
+	article.style {
+		value = {$plugin.tx_adxbackendlayout.global.article.styles}
+		override = {$plugin.tx_adxbackendlayout.layoutC11F11.article.styles}
+	}
+
+	complementary.class < .group.class
+	complementary.class {
+		value = {$plugin.tx_adxbackendlayout.global.complementary.classes}
+		override = {$plugin.tx_adxbackendlayout.layoutC11F11.complementary.classes}
+	}
+
+	complementary.style < .group.style
+	complementary.style {
+		value = {$plugin.tx_adxbackendlayout.global.complementary.styles}
+		override = {$plugin.tx_adxbackendlayout.layoutC11F11.complementary.styles}
+	}
+}
