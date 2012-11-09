@@ -38,43 +38,10 @@ lib.tx_adxbackendlayout.layoutF11C2313F11 {
 		override = {$plugin.tx_adxbackendlayout.layoutF11C2313F11.article.classes}
 	}
 
-	article.style = COA
+	article.style < .group.style
 	article.style {
-
-		stdWrap.noTrimWrap = | style="|"|
-
-		10 = LOAD_REGISTER
-		10.gutter.cObject = TEXT
-		10.gutter.cObject {
-			value = {$plugin.tx_adxbackendlayout.global.gutter}
-			override = {$plugin.tx_adxbackendlayout.layoutF11C2313F11.gutter}
-		}
-
-		20 = TEXT
-		20.value = float:left;
-
-		30 = TEXT
-		30 {
-			value = {$plugin.tx_adxbackendlayout.global.article.width}
-			override = {$plugin.tx_adxbackendlayout.layoutF11C2313F11.article.width}
-			ifEmpty.dataWrap = ((100 - {register: gutter} * 2) / 3) * 2 + {register: gutter}
-
-			prioriCalc = 1
-			round.roundType = round
-			round.decimals = 3
-
-			wrap = width:|%;
-		}
-
-		40 = TEXT
-		40 {
-			data = register: gutter
-			wrap = margin-right:|%;
-		}
-
-		50 = TEXT
-		50.value = {$plugin.tx_adxbackendlayout.global.article.styles}
-		50.override = {$plugin.tx_adxbackendlayout.layoutF11C2313F11.article.styles}
+		value = {$plugin.tx_adxbackendlayout.global.article.styles}
+		override = {$plugin.tx_adxbackendlayout.layoutF11C2313F11.article.styles}
 	}
 
 	asideRight.class < .group.class
@@ -83,17 +50,10 @@ lib.tx_adxbackendlayout.layoutF11C2313F11 {
 		override = {$plugin.tx_adxbackendlayout.layoutF11C2313F11.asideRight.classes}
 	}
 
-	asideRight.style < .article.style
+	asideRight.style < .group.style
 	asideRight.style {
-
-		20.value = float:right;
-
-		30.ifEmpty.dataWrap = (100 - {register: gutter} * 2) / 3
-
-		40 >
-
-		50.value = {$plugin.tx_adxbackendlayout.global.asideRight.styles}
-		50.override = {$plugin.tx_adxbackendlayout.layoutF11C2313F11.asideRight.styles}
+		value = {$plugin.tx_adxbackendlayout.global.asideRight.styles}
+		override = {$plugin.tx_adxbackendlayout.layoutF11C2313F11.asideRight.styles}
 	}
 
 	complementary.class < .group.class
