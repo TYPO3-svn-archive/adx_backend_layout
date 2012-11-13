@@ -1,8 +1,4 @@
 
-<aside class="columnWrap">
-	<div class="columnInnerWrap">
-		<f:cObject typoscriptObjectPath="lib.tx_adxbackendlayout.columnHooks.asideRight.preCObject" data="{_all}" />
-		{columnContent -> f:format.raw()}
-		<f:cObject typoscriptObjectPath="lib.tx_adxbackendlayout.columnHooks.asideRight.postCObject" data="{_all}" />
-	</div>
-</aside>
+<f:cObject typoscriptObjectPath="lib.tx_adxbackendlayout.columnHooks.asideRight.preCObject" data="{_all}" />
+{columnAsideRight -> f:format.raw()}
+<f:cObject typoscriptObjectPath="lib.tx_adxbackendlayout.columnHooks.asideRight.postCObject" data="{_all}" />

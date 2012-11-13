@@ -3,23 +3,5 @@
  * plugin.tx_adxbackendlayout
  */
 plugin.tx_adxbackendlayout {
-
 	layoutF11C11F11 < plugin.tx_adxbackendlayout.global
-
-	layoutF11C11F11 {
-
-		feature < .group
-		feature.classes := prependString( {$plugin.tx_adxless.cssClassPrefix}container {$plugin.tx_adxless.cssClassPrefix}container-fixed {$plugin.tx_adxbackendlayout.cssClassPrefix}column )
-
-		content < .group
-		content.classes = {$plugin.tx_adxless.cssClassPrefix}container {$plugin.tx_adxless.cssClassPrefix}container-fixed
-
-		article < .group
-
-		complementary < .group
-		complementary.classes := prependString( {$plugin.tx_adxless.cssClassPrefix}container {$plugin.tx_adxless.cssClassPrefix}container-fixed {$plugin.tx_adxbackendlayout.cssClassPrefix}column )
-
-		footer < .group
-		footer.classes := prependString( {$plugin.tx_adxless.cssClassPrefix}container {$plugin.tx_adxless.cssClassPrefix}container-fixed {$plugin.tx_adxbackendlayout.cssClassPrefix}column )
-	}
 }

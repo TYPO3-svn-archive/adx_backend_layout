@@ -102,12 +102,6 @@ lib.tx_adxbackendlayout.sections {
 
 	footerStdWrap = TEXT
 	footerStdWrap.current = 1
-
-	topSectionsStdWrap = TEXT
-	topSectionsStdWrap.current = 1
-
-	bottomSectionsStdWrap = TEXT
-	bottomSectionsStdWrap.current = 1
 }
 
 lib.tx_adxbackendlayout.columnHooks {
@@ -133,8 +127,8 @@ lib.tx_adxbackendlayout.columnHooks {
 	complementary.preCObject = 
 	complementary.postCObject = 
 
-	footer.preCObject = 
-	footer.postCObject = 
+	bottom.preCObject = 
+	bottom.postCObject = 
 }
 
 

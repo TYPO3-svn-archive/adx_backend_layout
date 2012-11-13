@@ -32,6 +32,30 @@ lib.tx_adxbackendlayout.layoutF11C2313F11 {
 		override = {$plugin.tx_adxbackendlayout.layoutF11C2313F11.feature.styles}
 	}
 
+	content.class < .group.class
+	content.class {
+		value = {$plugin.tx_adxbackendlayout.global.content.classes}
+		override = {$plugin.tx_adxbackendlayout.layoutF11C2313F11.content.classes}
+	}
+
+	content.style < .group.style
+	content.style {
+		value = {$plugin.tx_adxbackendlayout.global.content.styles}
+		override = {$plugin.tx_adxbackendlayout.layoutF11C2313F11.content.styles}
+	}
+
+	contentColumnGroup.class < .group.class
+	contentColumnGroup.class {
+		value = {$plugin.tx_adxbackendlayout.global.contentColumnGroup.classes}
+		override = {$plugin.tx_adxbackendlayout.layoutF11C2313F11.contentColumnGroup.classes}
+	}
+
+	contentColumnGroup.style < .group.style
+	contentColumnGroup.style {
+		value = {$plugin.tx_adxbackendlayout.global.contentColumnGroup.styles}
+		override = {$plugin.tx_adxbackendlayout.layoutF11C2313F11.contentColumnGroup.styles}
+	}
+
 	article.class < .group.class
 	article.class {
 		value = {$plugin.tx_adxbackendlayout.global.article.classes}
@@ -66,5 +90,17 @@ lib.tx_adxbackendlayout.layoutF11C2313F11 {
 	complementary.style {
 		value = {$plugin.tx_adxbackendlayout.global.complementary.styles}
 		override = {$plugin.tx_adxbackendlayout.layoutF11C2313F11.complementary.styles}
+	}
+
+	footer.class < .group.class
+	footer.class {
+		value = {$plugin.tx_adxbackendlayout.global.complementary.classes}
+		override = {$plugin.tx_adxbackendlayout.layoutF11C2313F11.complementary.classes}
+	}
+
+	footer.style < .group.style
+	footer.style {
+		value = {$plugin.tx_adxbackendlayout.global.footer.styles}
+		override = {$plugin.tx_adxbackendlayout.layoutF11C2313F11.footer.styles}
 	}
 }

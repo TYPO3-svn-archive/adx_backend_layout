@@ -11,42 +11,46 @@
 
 	<section id="main"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.group.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.group.style', data: '{_all}')} role="main">
 
-		<div id="feature"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.feature.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.feature.style', data: '{_all}')} role="complementary">
-			<f:render partial="ColumnFeature" arguments="{columnContent: columnFeature}" />
-		</div><!-- #feature end -->
+		<f:if condition="{columnFeature}">
+			<aside id="feature"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.feature.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.feature.style', data: '{_all}')} role="complementary">
+				<f:render partial="ColumnFeature" arguments="{_all}" />
+			</aside><!-- #feature end -->
+		</f:if>
 
-		<div id="content"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.group.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.group.style', data: '{_all}')} role="group">
-			<div class="columnGroupWrap">
+		<div id="content"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.content.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.content.style', data: '{_all}')} role="group">
+			<div {f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.contentColumnGroup.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.contentColumnGroup.style', data: '{_all}')} role="group">
 
-				<div id="articles"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.article.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.article.style', data: '{_all}')} role="article">
-					<f:render partial="ColumnArticle" arguments="{columnContent: columnArticle}" />
-				</div><!-- #articles end -->
+				<article id="articles"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.article.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.article.style', data: '{_all}')} role="article">
+					<f:render partial="ColumnArticle" arguments="{_all}" />
+				</article><!-- #articles end -->
 
-				<div id="asideRight"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.asideRight.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.asideRight.style', data: '{_all}')} role="complementary">
-					<f:render partial="ColumnAsideRight" arguments="{columnContent: columnAsideRight}" />
-				</div><!-- #asideRight end -->
-
-				<div class="clear"></div>
-
-				<f:cObject typoscriptObjectPath="lib.tx_adxbackendlayout.sections.toTopBottom" data="{_all}" />
+				<aside id="asideRight"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.asideRight.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.asideRight.style', data: '{_all}')} role="complementary">
+					<f:render partial="ColumnAsideRight" arguments="{_all}" />
+				</aside><!-- #asideRight end -->
 
 			</div>
+
+			<f:cObject typoscriptObjectPath="lib.tx_adxbackendlayout.sections.toTopBottom" data="{_all}" />
 		</div><!-- #content end -->
 
 	</section><!-- #main end -->
 
 </f:section>
 
-<f:section name="Complementary">
+<f:section name="Bottom">
 
-	<section id="complementary"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.complementary.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.complementary.style', data: '{_all}')} role="complementary">
-		<f:render partial="Complementary" arguments="{columnContent: complementary}" />
-	</section><!-- #complementary end -->
+	<section id="bottom">
 
-</f:section>
+		<f:if condition="{columnComplementary}">
+			<aside id="complementary"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.complementary.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.complementary.style', data: '{_all}')} role="complementary">
+				<f:render partial="ColumnComplementary" arguments="{_all}" />
+			</aside><!-- #complementary end -->
+		</f:if>
 
-<f:section name="Footer">
+		<footer id="footer"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.footer.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.footer.style', data: '{_all}')} role="contentinfo">
+			<f:render partial="Footer" arguments="{_all}" />
+		</footer><!-- #footer end -->
 
-	<f:render partial="Footer" />
+	</section>
 
 </f:section>

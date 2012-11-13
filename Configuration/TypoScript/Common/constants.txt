@@ -20,36 +20,28 @@ plugin.tx_adxbackendlayout {
 			styles = 
 		}
 
-		content < .group
-
 		feature < .group
-		feature {
-			classes = {$plugin.tx_adxbackendlayout.cssClassPrefix}column {$plugin.tx_adxbackendlayout.cssClassPrefix}column-feature
-		}
+		feature.classes = {$plugin.tx_adxless.cssClassPrefix}container
+
+		content < .group
+		content.classes = {$plugin.tx_adxless.cssClassPrefix}container
+
+		contentColumnGroup < .group
+		contentColumnGroup.classes = {$plugin.tx_adxless.cssClassPrefix}row-fluid
 
 		article < .group
-		article {
-			classes = {$plugin.tx_adxbackendlayout.cssClassPrefix}column {$plugin.tx_adxbackendlayout.cssClassPrefix}column-articles
-		}
+		article.classes = {$plugin.tx_adxless.cssClassPrefix}row-fluid
 
 		asideRight < .group
-		asideRight {
-			classes = {$plugin.tx_adxbackendlayout.cssClassPrefix}column {$plugin.tx_adxbackendlayout.cssClassPrefix}column-aside {$plugin.tx_adxbackendlayout.cssClassPrefix}column-right
-		}
+		asideRight.classes = {$plugin.tx_adxless.cssClassPrefix}row-fluid
 
 		asideLeft < .group
-		asideLeft {
-			classes = {$plugin.tx_adxbackendlayout.cssClassPrefix}column {$plugin.tx_adxbackendlayout.cssClassPrefix}column-aside {$plugin.tx_adxbackendlayout.cssClassPrefix}column-left
-		}
+		asideLeft.classes = {$plugin.tx_adxless.cssClassPrefix}row-fluid
 
 		complementary < .group
-		complementary {
-			classes = {$plugin.tx_adxbackendlayout.cssClassPrefix}column {$plugin.tx_adxbackendlayout.cssClassPrefix}column-aside {$plugin.tx_adxbackendlayout.cssClassPrefix}column-complementary
-		}
+		complementary.classes = {$plugin.tx_adxless.cssClassPrefix}container
 
 		footer < .group
-		footer {
-			classes = {$plugin.tx_adxbackendlayout.cssClassPrefix}column {$plugin.tx_adxbackendlayout.cssClassPrefix}column-aside {$plugin.tx_adxbackendlayout.cssClassPrefix}column-complementary
-		}
+		footer.classes = {$plugin.tx_adxless.cssClassPrefix}container
 	}
 }
