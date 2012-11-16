@@ -78,7 +78,7 @@ lib.tx_adxbackendlayout.sections {
 
 	headerStdWrap = TEXT
 	headerStdWrap.current = 1
-	headerStdWrap.wrap = <div id="header"> | </div><!-- #header end -->
+	headerStdWrap.wrap = <div id="header" class="adxless-container"> | </div><!-- #header end -->
 
 	meta = 
 
@@ -90,7 +90,7 @@ lib.tx_adxbackendlayout.sections {
 
 	navigationStdWrap = TEXT
 	navigationStdWrap.current = 1
-	navigationStdWrap.wrap = <div id="navigation" role="navigation"> | </div><!-- #navigation end -->
+	navigationStdWrap.wrap = <div id="navigation" class="adxless-container" role="navigation"> | </div><!-- #navigation end -->
 
 	toTopBottom = TEXT
 	toTopBottom {

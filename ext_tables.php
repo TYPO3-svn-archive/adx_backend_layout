@@ -60,7 +60,8 @@ $tempColumns = array(
 
 t3lib_div::loadTCA('tt_content');
 t3lib_extMgm::addTCAcolumns('tt_content', $tempColumns, 1);
-t3lib_extMgm::addFieldsToPalette('tt_content', 'visibility', 'tx_adxbackendlayout_inherit,--linebreak--,tx_adxbackendlayout_device_visibility', 'after:linkToTop');
+t3lib_extMgm::addFieldsToPalette('tt_content', 'visibility', 'tx_adxbackendlayout_inherit', 'after:linkToTop');
+t3lib_extMgm::addFieldsToPalette('tt_content', 'frames', '--linebreak--,tx_adxbackendlayout_device_visibility', 'after:section_frame');
 t3lib_extMgm::addLLrefForTCAdescr('tt_content', 'EXT:adx_backend_layout/Resources/Private/Language/locallang_db.xlf');
 
 ?>

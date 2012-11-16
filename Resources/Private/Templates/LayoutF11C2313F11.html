@@ -18,19 +18,25 @@
 		</f:if>
 
 		<div id="content"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.content.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.content.style', data: '{_all}')} role="group">
-			<div {f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.contentColumnGroup.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.contentColumnGroup.style', data: '{_all}')} role="group">
 
-				<article id="articles"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.article.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.article.style', data: '{_all}')} role="article">
-					<f:render partial="ColumnArticle" arguments="{_all}" />
-				</article><!-- #articles end -->
+			<div class="contentInnerWrap">
 
-				<aside id="asideRight"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.asideRight.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.asideRight.style', data: '{_all}')} role="complementary">
-					<f:render partial="ColumnAsideRight" arguments="{_all}" />
-				</aside><!-- #asideRight end -->
+				<div {f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.contentColumnGroup.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.contentColumnGroup.style', data: '{_all}')} role="group">
+
+					<article id="articles"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.article.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.article.style', data: '{_all}')} role="article">
+						<f:render partial="ColumnArticle" arguments="{_all}" />
+					</article><!-- #articles end -->
+
+					<aside id="asideRight"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.asideRight.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.asideRight.style', data: '{_all}')} role="complementary">
+						<f:render partial="ColumnAsideRight" arguments="{_all}" />
+					</aside><!-- #asideRight end -->
+
+				</div>
+
+				<f:cObject typoscriptObjectPath="lib.tx_adxbackendlayout.sections.toTopBottom" data="{_all}" />
 
 			</div>
 
-			<f:cObject typoscriptObjectPath="lib.tx_adxbackendlayout.sections.toTopBottom" data="{_all}" />
 		</div><!-- #content end -->
 
 	</section><!-- #main end -->
@@ -42,12 +48,17 @@
 	<section id="bottom">
 
 		<f:if condition="{columnComplementary}">
-			<aside id="complementary"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.complementary.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.complementary.style', data: '{_all}')} role="complementary">
-				<f:render partial="ColumnComplementary" arguments="{_all}" />
+			<aside id="complementary"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C11F11.complementary.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C11F11.complementary.style', data: '{_all}')} role="complementary">
+
+				<div class="complementaryInnerWrap">
+
+					<f:render partial="ColumnComplementary" arguments="{_all}" />
+
+				</div>
 			</aside><!-- #complementary end -->
 		</f:if>
 
-		<footer id="footer"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.footer.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C2313F11.footer.style', data: '{_all}')} role="contentinfo">
+		<footer id="footer"{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C11F11.footer.class', data: '{_all}')}{f:cObject(typoscriptObjectPath: 'lib.tx_adxbackendlayout.layoutF11C11F11.footer.style', data: '{_all}')} role="contentinfo">
 			<f:render partial="Footer" arguments="{_all}" />
 		</footer><!-- #footer end -->
 
