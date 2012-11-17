@@ -151,7 +151,7 @@ plugin.tx_adxbackendlayout {
 	variables {
 
 		clearfix = TEXT
-		clearfix.value = {$plugin.tx_adxless.cssClassPrefix}clearfix
+		clearfix.value = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}clearfix
 
 		backendLayoutId =< lib.tx_adxbackendlayout.layoutId
 
@@ -193,25 +193,25 @@ tt_content.stdWrap.innerWrap.cObject.default.20 {
 		default.value = 
 
 		1 = TEXT
-		1.value = {$plugin.tx_adxless.cssClassPrefix}hidden-desktop
+		1.value = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}hidden-desktop
 
 		2 = TEXT
-		2.value = {$plugin.tx_adxless.cssClassPrefix}hidden-tablet
+		2.value = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}hidden-tablet
 
 		3 = TEXT
-		3.value = {$plugin.tx_adxless.cssClassPrefix}visible-phone
+		3.value = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}visible-phone
 
 		4 = TEXT
-		4.value = {$plugin.tx_adxless.cssClassPrefix}hidden-phone
+		4.value = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}hidden-phone
 
 		5 = TEXT
-		5.value = {$plugin.tx_adxless.cssClassPrefix}visible-tablet
+		5.value = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}visible-tablet
 
 		6 = TEXT
-		6.value = {$plugin.tx_adxless.cssClassPrefix}visible-desktop
+		6.value = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}visible-desktop
 
 		7 = TEXT
-		7.value = {$plugin.tx_adxless.cssClassPrefix}hidden-desktop {$plugin.tx_adxless.cssClassPrefix}hidden-tablet {$plugin.tx_adxless.cssClassPrefix}hidden-phone
+		7.value = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}hidden-desktop {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}hidden-tablet {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}hidden-phone
 
 		stdWrap.required = 1
 		stdWrap.noTrimWrap = | ||

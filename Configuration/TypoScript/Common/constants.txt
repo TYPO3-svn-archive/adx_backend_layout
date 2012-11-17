@@ -21,27 +21,27 @@ plugin.tx_adxbackendlayout {
 		}
 
 		feature < .group
-		feature.classes = {$plugin.tx_adxless.cssClassPrefix}container
+		feature.classes = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}container
 
 		content < .group
-		content.classes = {$plugin.tx_adxless.cssClassPrefix}container
+		content.classes = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}container
 
 		contentColumnGroup < .group
-		contentColumnGroup.classes = {$plugin.tx_adxless.cssClassPrefix}row-fluid
+		contentColumnGroup.classes = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}row-fluid
 
 		article < .group
-		article.classes = {$plugin.tx_adxless.cssClassPrefix}row-fluid
+		article.classes = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}row-fluid
 
 		asideRight < .group
-		asideRight.classes = {$plugin.tx_adxless.cssClassPrefix}row-fluid
+		asideRight.classes = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}row-fluid
 
 		asideLeft < .group
-		asideLeft.classes = {$plugin.tx_adxless.cssClassPrefix}row-fluid
+		asideLeft.classes = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}row-fluid
 
 		complementary < .group
-		complementary.classes = {$plugin.tx_adxless.cssClassPrefix}container
+		complementary.classes = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}container
 
 		footer < .group
-		footer.classes = {$plugin.tx_adxless.cssClassPrefix}container
+		footer.classes = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}container
 	}
 }
