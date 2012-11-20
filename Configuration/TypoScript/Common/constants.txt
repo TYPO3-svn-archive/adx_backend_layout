@@ -21,27 +21,27 @@ plugin.tx_adxbackendlayout {
 		}
 
 		feature < .group
-		feature.classes = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}container
+		feature.classes = container
 
 		content < .group
-		content.classes = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}container
+		content.classes = container
 
 		contentColumnGroup < .group
-		contentColumnGroup.classes = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}row-fluid
+		contentColumnGroup.classes = row-fluid
 
 		article < .group
-		article.classes = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}row-fluid
+		article.classes = row-fluid
 
 		asideRight < .group
-		asideRight.classes = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}row-fluid
+		asideRight.classes = row-fluid
 
 		asideLeft < .group
-		asideLeft.classes = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}row-fluid
+		asideLeft.classes = row-fluid
 
 		complementary < .group
-		complementary.classes = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}container
+		complementary.classes = container
 
 		footer < .group
-		footer.classes = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}container
+		footer.classes = container
 	}
 }

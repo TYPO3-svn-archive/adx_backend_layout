@@ -6,7 +6,7 @@ plugin.tx_adxbackendlayout {
 
 	layoutF11C2313F11 < plugin.tx_adxbackendlayout.global
 	layoutF11C2313F11 {
-		article.classes := appendString( {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}span8 )
-		asideRight.classes := appendString( {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}span4 )
+		article.classes := appendString( span8 )
+		asideRight.classes := appendString( span4 )
 	}
 }

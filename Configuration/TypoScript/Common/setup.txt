@@ -78,7 +78,7 @@ lib.tx_adxbackendlayout.sections {
 
 	headerStdWrap = TEXT
 	headerStdWrap.current = 1
-	headerStdWrap.wrap = <div id="header" class="adxless-container"> | </div><!-- #header end -->
+	headerStdWrap.wrap = <div id="header" class="container"> | </div><!-- #header end -->
 
 	meta = 
 
@@ -90,7 +90,7 @@ lib.tx_adxbackendlayout.sections {
 
 	navigationStdWrap = TEXT
 	navigationStdWrap.current = 1
-	navigationStdWrap.wrap = <div id="navigation" class="adxless-container" role="navigation"> | </div><!-- #navigation end -->
+	navigationStdWrap.wrap = <div id="navigation" class="container" role="navigation"> | </div><!-- #navigation end -->
 
 	toTopBottom = TEXT
 	toTopBottom {
@@ -151,7 +151,7 @@ plugin.tx_adxbackendlayout {
 	variables {
 
 		clearfix = TEXT
-		clearfix.value = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}clearfix
+		clearfix.value = clearfix
 
 		backendLayoutId =< lib.tx_adxbackendlayout.layoutId
 
@@ -193,25 +193,25 @@ tt_content.stdWrap.innerWrap.cObject.default.20 {
 		default.value = 
 
 		1 = TEXT
-		1.value = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}hidden-desktop
+		1.value = hidden-desktop
 
 		2 = TEXT
-		2.value = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}hidden-tablet
+		2.value = hidden-tablet
 
 		3 = TEXT
-		3.value = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}visible-phone
+		3.value = visible-phone
 
 		4 = TEXT
-		4.value = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}hidden-phone
+		4.value = hidden-phone
 
 		5 = TEXT
-		5.value = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}visible-tablet
+		5.value = visible-tablet
 
 		6 = TEXT
-		6.value = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}visible-desktop
+		6.value = visible-desktop
 
 		7 = TEXT
-		7.value = {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}hidden-desktop {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}hidden-tablet {$plugin.tx_adxless.bootstrapGrid.cssClassPrefix}hidden-phone
+		7.value = hidden-desktop hidden-tablet hidden-phone
 
 		stdWrap.required = 1
 		stdWrap.noTrimWrap = | ||
