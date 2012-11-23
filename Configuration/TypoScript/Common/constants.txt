@@ -30,10 +30,10 @@ plugin.tx_adxbackendlayout {
 		contentColumnGroup.classes = row-fluid
 
 		article < .group
-		article.classes = row-fluid
+		article.classes = 
 
 		asideRight < .group
-		asideRight.classes = row-fluid
+		asideRight.classes = 
 
 		asideLeft < .group
 		asideLeft.classes = row-fluid
